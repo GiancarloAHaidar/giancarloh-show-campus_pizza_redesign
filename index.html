@@ -42,7 +42,6 @@
         font-family: 'Roboto', sans-serif;
       }
 
-      /* Header Bottom Border Line within Padding */
       .header::after {
         content: "";
         position: absolute;
@@ -72,7 +71,6 @@
         color: #777;
       }
 
-      /* Centered Navigation Links */
       .header-center {
         position: absolute;
         left: 50%;
@@ -89,7 +87,6 @@
         position: relative;
       }
 
-      /* Overline on "Show" instead of "Tell" */
       .header-center a:first-child.active::before {
         content: '';
         position: absolute;
@@ -100,12 +97,10 @@
         background-color: #333;
       }
 
-      /* Mark-style Highlight on Hover */
       .header-center a:hover {
         background-color: #f6f6f6;
       }
 
-      /* Exit Button Style */
       .header-right a {
         color: #333;
         text-decoration: none;
@@ -117,68 +112,63 @@
       }
 
       .header-right a:hover {
-        color: #0073b1;
+        color: #005582;
       }
 
-      /* Project Media Section at Top */
-      .project-media-top {
-        display: flex;
-        gap: 20px;
-        margin: 40px 0;
-      }
-
-      .media-item {
-        flex: 1;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      /* Add 1px border stroke around images */
-      .media-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      /* Add borders to left-hand images with color #f6f6f6 */
-      .bordered-left {
-        border-left: 1px solid rgb(246, 246, 246);
-        border-right: 1px solid rgb(246, 246, 246);
+      /* Link Hover Effect */
+      a:hover {
+        background-color: #f6f6f6;
+        transition: background-color 0.3s;
       }
 
       /* Project Showcase Section */
       .project-showcase {
         padding: 40px 60px;
-        text-align: center;
       }
 
-      .project-title {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: center;
+      .project-image-placeholder {
+        width: 100%;
+        margin: 0 auto 20px;
+      }
+
+      .project-image-placeholder img {
+        width: 100%;
+        height: auto;
+      }
+
+      .project-media-section {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        margin-top: 20px;
       }
 
       .project-description {
+        flex: 1;
         font-size: 1rem;
         color: #666;
-        margin-bottom: 20px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: left;
+        position: sticky;
+        top: 100px;
+        /* Adjust this value based on your header height */
+        max-height: calc(100vh - 120px);
+        /* Ensure it stays visible */
+        overflow-y: auto;
+        /* Allow scrolling within the sticky element */
+        padding-right: 10px;
+      }
+
+      .project-pdf-placeholder {
+        flex: 1;
         text-align: center;
       }
 
-      .project-media {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .media-row {
-        display: flex;
-        gap: 20px;
+      .project-pdf-placeholder img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-left: 1px solid #f6f6f6; /* Adds left stroke */
+        border-right: 1px solid #f6f6f6; /* Adds right stroke */
       }
 
       /* Footer */
@@ -195,7 +185,6 @@
         position: relative;
       }
 
-      /* Full-width Footer Line */
       .footer::before {
         content: "";
         position: absolute;
@@ -224,6 +213,10 @@
         background-color: #f6f6f6;
       }
 
+      .footer .footer-section strong {
+        margin-bottom: 10px;
+      }
+
       .footer .contact-message {
         text-align: left;
         font-size: 1.2rem;
@@ -246,11 +239,11 @@
     </style>
   </head>
   <body>
-    <!-- Header with Centered Navigation -->
+    <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <h1>Giancarlo A. Haidar</h1>
-        <h2>GBDA Student</h2>
+        <h1>Campus Pizza Redesign</h1>
+        <h2>Giancarlo A. Haidar</h2>
       </div>
       <div class="header-center">
         <a href="#SHOW" target="_self" class="active">Show</a>
@@ -261,48 +254,27 @@
       </div>
     </header>
 
-    <!-- Project Media Section at Top -->
-    <div class="container project-media-top">
-      <div class="media-item bordered-left">
-        <img src="Main_Landing Page 1 (Home).jpg" alt="Campus Pizza Redesign Image 1">
-      </div>
-      <div class="media-item">
-        <img src="High-Fidelity Main_Landing Page 1 (Home).jpg" alt="Campus Pizza Redesign Image 2">
-      </div>
-    </div>
-
-    <!-- Project Showcase Section -->
+    <!-- Project Showcase -->
     <div class="container project-showcase">
-      <h2 class="project-title">Campus Pizza Redesign</h2>
-      <p class="project-description">
-        The Campus Pizza Redesign project focuses on creating an updated, modern user experience for a popular pizza restaurant. The redesign includes a revamped layout for the menu, order processing, and user interaction to improve usability and visual appeal.
-      </p>
-
-      <!-- Project Media Section with Remaining Images -->
-      <div class="project-media">
-        <!-- Second Row of Images -->
-        <div class="media-row">
-          <div class="media-item bordered-left">
-            <img src="Sub-Page 2 (Menu).jpg" alt="Campus Pizza Redesign Image 3">
-          </div>
-          <div class="media-item">
-            <img src="High-Fidelity Sub-Page 2&3 (Menu & Menu-Pizza).jpg" alt="Campus Pizza Redesign Image 4">
-          </div>
-        </div>
-
-        <!-- Third Row of Images -->
-        <div class="media-row">
-          <div class="media-item bordered-left">
-            <img src="Sub-Page 4 (Contact).jpg" alt="Campus Pizza Redesign Image 5">
-          </div>
-          <div class="media-item">
-            <img src="High-Fidelity Sub-Page 4 (Contact).png" alt="Campus Pizza Redesign Image 6">
-          </div>
+      <div class="project-image-placeholder">
+        <img src="High-Fidelity Main_Landing Page 1 (Home).jpg" alt="Video Placeholder">
+      </div>
+      <div class="project-media-section">
+        <p class="project-description">
+          The Campus Pizza Redesign project focuses on creating an updated, modern user experience for a popular pizza restaurant. The redesign includes a revamped layout for the menu, order processing, and user interaction to improve usability and visual appeal.
+        </p>
+        <div class="project-pdf-placeholder">
+          <img src="Main_Landing Page 1 (Home).jpg" alt="PDF Placeholder">
+          <img src="High-Fidelity Sub-Page 2 (Menu).png" alt="Additional Image 1">
+          <img src="Sub-Page 2 (Menu).jpg" alt="Additional Image 2">
+          <img src="High-Fidelity Sub-Sub-Page 3 (Menu-Pizza).png" alt="Additional Image 3">
+          <img src="Sub-Page 4 (Contact).jpg" alt="Additional Image 4">
+          <img src="High-Fidelity Sub-Page 4 (Contact).png" alt="Additional Image 5">
         </div>
       </div>
     </div>
 
-    <!-- Footer with Link Sections and Last Updated -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-section">
         <strong>Main</strong>
